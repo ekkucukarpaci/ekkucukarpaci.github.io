@@ -1,1 +1,0 @@
-# ekkucukarpaci.github.io
