@@ -1,0 +1,10 @@
+<nav>
+  <ul>
+    {% for item in site.data.nav.global %}
+    <li class="nav-item">
+      <a href="{{item.link}}">
+        <span class="fa {{item.icon}} fa-lg fa-fw"></span>{{item.label}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,20 +1,20 @@
 <header>
-    {% if site.compass.logo %}
+    {% if site.data.compass.logo and page.show_logo %}
     <div class="logo-container">
-      <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+      <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.data.compass.logo }}')"></a>
     </div>
     {% endif %}
 
-    {% if site.compass.author %}
-    <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+    {% if site.data.compass.author %}
+    <div class="author-container"><h1>{{ site.data.compass.author }}</h1></div>
     {% endif %}
 
-    {% if site.compass.tagline %}
-    <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+    {% if site.data.compass.tagline %}
+    <div class="tagline-container"><p>{{ site.data.compass.tagline }}</p></div>
     {% endif %}
 
-    {% if page.layout != 'about' %}
+    {% if page.global_nav %}
     <hr>
-    {% include footer.html %}
+    {% include global_nav.html %}
     {% endif %}
 </header>

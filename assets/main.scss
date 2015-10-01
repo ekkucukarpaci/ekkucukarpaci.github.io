@@ -11,16 +11,6 @@ body {
 	background-color: $background-color;
 }
 
-header,
-main {
-	padding: 0 20px;
-}
-
-/*** wrapper div for both header and main ***/
-.wrapper {
-	margin-top: 10%;
-}
-
 /*** anchor tags ***/
 a:link,
 a:visited,
@@ -74,30 +64,88 @@ hr {
 	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
 }
 
+header,
+main {
+	padding: 0 20px;
+}
+
+/*** wrapper div for both header and main ***/
+.wrapper,
+.wrapper-about {
+	margin-top: 10%;
+}
+
 /*** media queries ***/
 /* X-Small devices (phones, 480px and up) */
-@media (min-width: 480px) {
+@media (max-width: 767px){
 	/* wrapper stays 480px wide past 480px wide and is kept centered */
+	.wrapper-about {
+		width: 100%;
+		margin: 5% 0;
+	}
+
+	.about {
+		margin: 0 auto 0 auto;
+		width: 80%
+	}
+
 	.wrapper {
-		width: 480px;
-		margin: 10% auto 0 auto;
+		width: 100%;
+		margin: 2% auto;
+	}
+
+	.nav-item {
+		display: inline;
 	}
 }
 
 /* All other devices (768px and up) */
 @media (min-width: 768px) {
-	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
-	to accomodate both the header column and the content column */
+	/* past 768px the layout is changed */
 	.wrapper {
+		width: 100%;
+		margin: 2% 0 0;
+	}
+
+	.wrapper header {
+		float: left;
+		width: 16em;
+		text-align: right;
+		position: fixed;
+	}
+
+	.wrapper main {
+		//padding: 0;
+		margin-left: 18em;
+	}
+
+	nav {direction: rtl;}
+
+	nav a {
+	display: block;
+	width: 10em;
+	}
+
+	/* and the wrapper has a fixed width of 680px to accomodate both the header
+	column and the content column */
+	.wrapper-about {
 		width: 680px;
+		margin: 10% auto 0;
 	}
 
 	/* the header column stays left and has a dynamic width with all contents
 	aligned right */
-	header {
+	.wrapper-about header {
 		float: left;
 		width: 46%;
 		text-align: right;
+		padding: 0;
+	}
+
+	.wrapper-about main {
+		width: 46%;
+		margin-left: 54%;
+		padding: 0;
 	}
 
 	.author-container h1,
@@ -105,23 +153,25 @@ hr {
 	.tagline-container p {
 		text-align: right;
 	}
-
-	main {
-		width: 46%;
-		margin-left: 54%;
-		padding: 0;
-	}
 }
 
 /*** main content list ***/
-.main-list-item {
+.nav-item,
+.about-item {
+	margin: 0.8em 0;
 	font-weight: bold;
 	font-size: 1.2em;
-	margin: 0.8em 0;
 }
 
-/* override the left margin added by font awesome for the main content list,
-since it must be aligned with the content */
-.fa-ul.main-list {
-	margin-left: 0;
+.about ul,
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.about span,
+nav span {
+	color: $text-color;
+	padding: 0 .3em;
 }

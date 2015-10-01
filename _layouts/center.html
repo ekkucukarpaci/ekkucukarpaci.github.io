@@ -2,13 +2,11 @@
 <html>
   {% include head.html %}
   <body>
-    <div class="wrapper">
+    <div class="wrapper-about">
         {% include header.html %}
         <main>
-          <div class="content">
-            {{ content }}
-            {% include footer.html %}
-          </div>
+          {{ content }}
+          {% unless page.hide_about %}{% include about.html %}{% endunless %}
         </main>
     </div>
   </body>

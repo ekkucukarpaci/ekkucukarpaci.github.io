@@ -1,0 +1,16 @@
+---
+about:
+  - label: "Send Mail"
+    link: "mailto:emre@kucukarpaci.com"
+    icon: "fa-envelope"
+  - label: "PGP Key"
+    link: "./pgp.txt"
+    icon: "fa-lock"
+
+global:
+  - label: "About"
+    link: "/"
+    icon: "fa-user"
+  - label: "Test"
+    link: "/test/"
+    icon: "fa-flask"

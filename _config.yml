@@ -3,23 +3,10 @@ url: 'http://ekk.io/'
 baseurl: ''
 title: 'ekk.io'
 
-# compass configuration
-compass:
-  # an avatar or logo (optional)
-  #logo: "./profile.jpg"
-  # author will appear under the avatar (optional)
-  author: "Emre Küçükarpacı"
-  # tagline will appear under the title (optional)
-  #tagline: "That's me!"
-  # if include_analytics is true, the content of the analytics.html include will
-  # be added at the end of the <head> section. You can add your Google Analytics
-  # Tracking Code to that file.
-  include_analytics: false
-
 # Dependencies
 markdown: kramdown
 highlighter: pygments
 
 # Permalinks
 permalink: pretty
-relative_permalinks: true
+#relative_permalinks: true
